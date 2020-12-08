@@ -20,6 +20,9 @@ var disableNumbPadShortcuts = false;
 // how many boards are connected to the switch...
 var numberOfBoards = 2;
 
+// Set to one if you want all bank buttons should be hidden aka wrapped...
+var wrapBanks = 0;
+
 // this is the function called by init. If you want to add something, use this function to call some init-stuff you want
 function getYourRemoteIP()
 {
@@ -49,7 +52,7 @@ function RiseCallback(data)
 // If you are running on a raspberry pi... you can open the admin page.. :P
 function OpenAdminPage()
 {
-    var win = window.open('server.php', '_blank');
+    var win = window.open('admin.php?p=dm5xx', '_blank');
     win.focus();
 }
 
